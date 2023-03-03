@@ -1,0 +1,14 @@
+<div class = "border-bottom row" style="padding-bottom : 8px">
+  <div class = "col-10">
+    <h3 style = "color : #56666B;" >{{plan["name"]}}</h3>
+    <div><b>Galaxy : </b>{{plan["galaxy"]}}</div>
+    {% if 'distance' in plan %}
+    <div>
+      <p><b>Distance : </b>{{plan["distance"]}}</p>
+    </div>
+    {% endif %}
+  </div>  
+  <div class="col-2 mt-3">
+    <button type="button" class="btn btn-outline-success">Success</button>
+  </div>
+</div>
