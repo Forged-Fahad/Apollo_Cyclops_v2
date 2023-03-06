@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 app = Flask(__name__)
 
 PLANETS = [
@@ -30,6 +30,12 @@ PLANETS = [
 @app.route("/")
 def hello_world():
   return render_template("index.html" , planets = PLANETS)
+
+@app.route("/api/planets")
+def api_route():
+  return jsonify(PLANETS)
+
+
 
 if __name__ == "__main__":
   app.run(host = "0.0.0.0", debug = True )
